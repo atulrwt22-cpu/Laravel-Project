@@ -15,16 +15,22 @@ Route::get('/home', function () {
 });
 
 Route::get('about/{name}', function($name) {
-    return $name;
+    return view('about', ['name' => $name]);
+});
+
+Route::get('about/{name}/{other}', function($name, $other) {
+    return view('about', ['name' => $name , 'other' => $other]);
 });
 
 Route::get('home/{name}/{other}', function($name, $other) {
     return view('home', ['name' => $name , 'other' => $other]);
 });
 
-Route::get('/contact', function () {
-    return "<h1>Contact Page</h1>";
-});
+Route::redirect('/contact', '/');
+
+//Route::get('/contact', function () {
+  //  return "<h1>Contact Page</h1>";
+//});
 
 Route::get('/services', function(){
     return "<h1>Services Page</h1>";
