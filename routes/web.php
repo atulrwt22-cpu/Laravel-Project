@@ -7,3 +7,4 @@ Route::get('/', [usercontroller::class, 'index']);
 Route::get('user', [usercontroller::class, 'index']);
 Route::get('adduser', [usercontroller::class, 'addUser']);
 
+Route::get('user-details/{name}', [usercontroller::class, 'getUser']);

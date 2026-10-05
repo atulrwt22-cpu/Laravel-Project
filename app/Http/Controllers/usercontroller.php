@@ -15,4 +15,9 @@ class usercontroller extends Controller
     {
         return "new user added";
     }
+
+    function getUser($name)
+    {
+        return "This is user with name: " .$name. " and this is user controller";
+    }
 }
